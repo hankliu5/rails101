@@ -7,14 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 puts "Hello World!"
-puts "這個種子檔會自動建立一個帳號, 並且創建 20 個 groups, 每個 group 各 30 個 posts"
+puts "This seed will create an account, 20 groups for that account and 30 posts for each group automatically."
 
-create_account = User.create([email: 'liu19901124@gmail.com', password: '12345678'])
+create_account = User.create([email: 'liu19901124@gmail.com', password: '12345678', name: "Hank"])
 
 create_groups = for i in 1..20 do
-  Group.create!([title: "Group no.#{i}", description: "這是用種子建立的第#{i}個討論版", user_id: "1"])
+  Group.create!([title: "Group no.#{i}", description: "The no.#{i} forum made by seed", user_id: "1"])
   GroupUser.create(group_id: i, user_id: 1)
   for k in 1..30 do
-    Post.create!([group_id: "#{i}", content: "這是用種子建立的第#{k}個留言", user_id: "1"])
+    Post.create!([group_id: "#{i}", content: "The no.#{k} post made by seed", user_id: "1"])
   end
 end

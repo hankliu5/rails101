@@ -9,8 +9,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if !current_user %>
-          <li> <%= link_to("註冊", new_user_registration_path) %> </li>
-          <li> <%= link_to("登入", new_user_session_path) %> </li>
+          <li> <%= link_to("Sign Up", new_user_registration_path) %> </li>
+          <li> <%= link_to("Log in", new_user_session_path) %> </li>
         <% else %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello, <%= current_user.name %>
@@ -18,8 +18,8 @@
             <ul class="dropdown-menu">
               <li> <%= link_to("My Groups", account_groups_path) %></li>
               <li> <%= link_to("My Posts", account_posts_path) %></li>
-              <li> <%= link_to("帳號設定", edit_user_registration_path) %></li>
-              <li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
+              <li> <%= link_to("Account Setting", edit_user_registration_path) %></li>
+              <li> <%= link_to("Log Out", destroy_user_session_path, method: :delete) %> </li>
             </ul>
           </li>
         <% end %>
