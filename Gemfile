@@ -8,6 +8,8 @@ gem 'simple_form'
 
 gem "devise", "~> 4.0.0"
 
+gem 'puma'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use SCSS for stylesheets
